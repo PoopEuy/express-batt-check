@@ -8,6 +8,11 @@ import {
   getRealtimeLama,
   getSiteDownLama,
 } from "../controllers/realtimeLamaController.js";
+
+import {
+  getDetailsSites,
+  getBattLost,
+} from "../controllers/battCheckController.js";
 // init express router
 const router = express.Router();
 
@@ -28,6 +33,10 @@ router.get("/getRealtime", getRealtime);
 router.get("/getSiteDown", getSiteDown);
 router.get("/getRealtimeLama", getRealtimeLama);
 router.get("/getSiteDownLama", getSiteDownLama);
+
+//detail
+router.get("/getDetailsSites", getDetailsSites);
+router.get("/getBattLost", getBattLost);
 
 // export default router
 export default router;
